@@ -18,9 +18,3 @@ class Animal
     end
   end
 end
-
-animal_1 = Animal.new("dog", 4, "Rex")
-animal_2 = Animal.new("spider", 8, "Wilma")
-
-p animal_1.speak()
-p animal_2.speak()
