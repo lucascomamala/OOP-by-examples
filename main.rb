@@ -1,14 +1,20 @@
 require_relative "./dog.rb"
-require_relative "./spider.rb"
+require_relative "./spider"
+require_relative "./owner"
 
-animal = Animal.new("lion", 4, "Rex")
-dog = Dog.new("black", "Rex")
-spider = Spider.new(85, "Wilma")
+dog = Dog.new("black", "Rax")
+spider = Spider.new(85, "Bob")
+animal = Animal.new("lion", 4, "Some name")
 
-p animal.likes_food?("meat")
-p dog.likes_food?("meat")
-p spider.likes_food?("meat")
+alex = Owner.new("Alex")
+p alex.animals
+alex.add_animal(dog)
+p alex.animals
+alex.add_animal(spider)
+p alex.animals
+alex.add_animal(animal)
+p alex.animals.map {|animal| animal.name}
 
-p animal.likes_food?("bug")
-p dog.likes_food?("bug")
-p spider.likes_food?("bug")
+p alex.animals.count
+p alex.animals[0].name
+p alex.animals[0].number_of_legs
