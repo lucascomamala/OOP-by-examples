@@ -2,10 +2,8 @@ require_relative "./remover.rb"
 require_relative "./foods.rb"
 
 class Animal
-  attr_reader :id, :number_of_legs, :type
+  attr_reader :id, :number_of_legs, :type, :owner, :visits
   attr_accessor :name
-  attr_accessor :owner
-
 
   def initialize(type, number_of_legs, name = "Unknown")
     @id = Random.rand(1..1000)
@@ -13,6 +11,7 @@ class Animal
     @number_of_legs = number_of_legs
     @type = type
     @liked_food = NoFood.new()
+    @visits = []
   end
 
   def owner=(owner)
