@@ -4,6 +4,7 @@ require_relative "./foods.rb"
 class Animal
   attr_reader :id, :number_of_legs, :type
   attr_accessor :name
+  attr_accessor :owner
 
 
   def initialize(type, number_of_legs, name = "Unknown")

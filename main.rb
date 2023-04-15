@@ -7,14 +7,19 @@ spider = Spider.new(85, "Bob")
 animal = Animal.new("lion", 4, "Some name")
 
 alex = Owner.new("Alex")
-p alex.animals
+alex.animals
 alex.add_animal(dog)
-p alex.animals
+alex.animals
 alex.add_animal(spider)
-p alex.animals
+alex.animals
 alex.add_animal(animal)
-p alex.animals.map {|animal| animal.name}
+alex.animals
 
-p alex.animals.count
-p alex.animals[0].name
-p alex.animals[0].number_of_legs
+alex.animals[alex.animals.length-1].owner
+
+animal.owner
+# p animal.owner = alex
+animal.owner
+p animal.owner.name
+
+p alex.animals.last.owner.name
