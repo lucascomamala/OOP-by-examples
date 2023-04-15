@@ -15,6 +15,11 @@ class Animal
     @liked_food = NoFood.new()
   end
 
+  def owner=(owner)
+    @owner = owner
+    owner.animals.push(self) unless owner.animals.include?(self)
+  end
+
   def speak
     "grrrr"
   end
